@@ -12,7 +12,7 @@ html{
     margin:0;
     padding:0;
 }
-img, .card-top, .card-right, .card-bottom, .card-left{
+#vide1, #vide2, img, .card-top, .card-right, .card-bottom, .card-left{
   user-drag: none; 
   user-select: none;
   -moz-user-select: none;
@@ -27,8 +27,10 @@ img, .card-top, .card-right, .card-bottom, .card-left{
 }
 #plateau{
     width: 1200px;
+    max-width: 1200px;
+    height: 450px;
+    margin: 150px auto;
     background: #7d5788;
-    margin: auto;
     border-radius: 10px;
     border: 1px solid #444;
     display: flex;
@@ -40,8 +42,9 @@ img, .card-top, .card-right, .card-bottom, .card-left{
     display: flex; 
     flex-direction: row; 
     justify-content: space-evenly; 
-    width: 375px;
-    margin: 70px 0 0;
+    width: 371px;
+    padding: 70px 0 0;
+    border: solid transparent 2px;
 }
 .hand-card{
     position: absolute;

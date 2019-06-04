@@ -1,3 +1,13 @@
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+
+let playing = random(1,3);
+let image = document.getElementsByClassName("img-container");
+let zonePlayerOne = document.getElementById("mainPlayer1");
+let zonePlayerTwo = document.getElementById("mainPlayer2");
+setDraggable();
+
 let cardDrop;
 let tableCard = [
         [-1,-1,-1,-1],
@@ -10,6 +20,31 @@ let tableCard = [
         [-1,-1,-1,-1],
         [-1,-1,-1,-1]
 ];
+
+function setDraggable(){
+  console.log(playing);
+  if (playing == 1){
+    for (let i=0; i < 5; i++){
+      image[i].setAttribute("draggable","true");
+      zonePlayerOne.style.background = "url('assets/img/palet1.png') no-repeat left top";
+    }
+    for (let i=5; i < 10; i++){
+      image[i].setAttribute("draggable","false");
+      zonePlayerTwo.style.background = "none";
+    }
+  }
+  else{
+    for (let i=0; i < 5; i++){
+      image[i].setAttribute("draggable","false");
+      zonePlayerOne.style.background = "none";
+    }
+    for (let i=5; i < 10; i++){
+      image[i].setAttribute("draggable","true");
+      zonePlayerTwo.style.background = "url('assets/img/palet2.png') no-repeat right top";
+    }
+  }
+}
+
 function allowDrop(ev) {
   ev.preventDefault();
 }
@@ -34,10 +69,13 @@ function drop(ev) {
   // console.log(cardDrop);
   if (idCard[0].id.substr(4, 2) < 6){
     ev.target.style.background = "#008";
+    playing ++;
   }
   else{
     ev.target.style.background = "#800";
+    playing --;
   }
+  setDraggable();
   switch(ev.target.id.substr(2, 1)){
     case "1": 
             if ((parseInt(tableCard[(ev.target.id.substr(2, 1))-1][2]) > tableCard[1][1])&&(tableCard[1][1]>-1)){
@@ -255,8 +293,8 @@ function drop(ev) {
 
 let dropZone=document.querySelectorAll('.zoneCarte');
 for (let i=0; i<dropZone.length;i++){
-    dropZone[i].addEventListener('dragover', function(event){allowDrop(event)});
-    dropZone[i].addEventListener('drop', function(event){drop(event)});
+  dropZone[i].addEventListener('dragover', function(event){allowDrop(event)});
+  dropZone[i].addEventListener('drop', function(event){drop(event)});
 }
 
 let cartes=document.querySelectorAll('.img-container');
