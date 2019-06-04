@@ -187,9 +187,68 @@ function drop(ev) {
             }
           }  
           break;
-    case "7": console.log("pute 7"); break;
-    case "8": console.log("pute 8"); break;
-    case "9": console.log("pute 9"); break;
+    case "7":
+          if ((parseInt(tableCard[(ev.target.id.substr(2, 1))-1][0]) > tableCard[3][3])&&(tableCard[3][3]>-1)){
+            if(idCard[0].id.substr(4,2) < 6){
+              dropZone[3].style.background = "#008";
+            }
+            else{
+              dropZone[3].style.background = "#800";
+            }
+          }
+          if ((parseInt(tableCard[(ev.target.id.substr(2, 1))-1][2]) > tableCard[7][1])&&(tableCard[7][1]>-1)){
+            if(idCard[0].id.substr(4,2) < 6){
+              dropZone[7].style.background = "#008";
+            }
+            else{
+              dropZone[7].style.background = "#800";
+            }
+          }
+          break;
+    case "8":
+          if ((parseInt(tableCard[(ev.target.id.substr(2, 1))-1][0]) > tableCard[4][3])&&(tableCard[4][3]>-1)){
+            if(idCard[0].id.substr(4,2) < 6){
+              dropZone[4].style.background = "#008";
+            }
+            else{
+              dropZone[4].style.background = "#800";
+            }
+          }
+          if ((parseInt(tableCard[(ev.target.id.substr(2, 1))-1][1]) > tableCard[6][2])&&(tableCard[6][2]>-1)){
+            if(idCard[0].id.substr(4,2) < 6){
+              dropZone[6].style.background = "#008";
+            }
+            else{
+              dropZone[6].style.background = "#800";
+            }
+          }
+          if ((parseInt(tableCard[(ev.target.id.substr(2, 1))-1][2]) > tableCard[8][1])&&(tableCard[8][1]>-1)){
+            if(idCard[0].id.substr(4,2) < 6){
+              dropZone[8].style.background = "#008";
+            }
+            else{
+              dropZone[8].style.background = "#800";
+            }
+          }
+          break;
+    case "9":
+          if ((parseInt(tableCard[(ev.target.id.substr(2, 1))-1][0]) > tableCard[5][3])&&(tableCard[5][3]>-1)){
+            if(idCard[0].id.substr(4,2) < 6){
+              dropZone[5].style.background = "#008";
+            }
+            else{
+              dropZone[5].style.background = "#800";
+            }
+          }
+          if ((parseInt(tableCard[(ev.target.id.substr(2, 1))-1][1]) > tableCard[7][2])&&(tableCard[7][2]>-1)){
+            if(idCard[0].id.substr(4,2) < 6){
+              dropZone[7].style.background = "#008";
+            }
+            else{
+              dropZone[7].style.background = "#800";
+            }
+          }
+          break;
   }
   // console.log(tableCard);
 }
