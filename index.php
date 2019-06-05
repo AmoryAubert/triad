@@ -1,38 +1,23 @@
-<?php
-  require("assets/php/script.php");
-?>
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <title>Triad</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/menu.css">
+    <title>Triad</title>
 </head>
 <body>
-  <h1>Triad</h1>
-  <div id="plateau">
-    <div id="mainPlayer1">
-      <?php echo $player1 ?>
+    <h1>Triad</h1>
+    <div id="menu">
+        <ul>
+            <li><a href="/game.php">Joueur contre Joueur (local)</a></li>
+            <li>Joueur contre Joueur (en ligne)</li>
+            <li>Joueur contre Ordinateur</li>
+        </ul>
+        <div id="deck1"></div>
+        <div id="deck2"></div>
     </div>
-    <div id="jeu">
-      <div id="zc1" class="zoneCarte"></div>
-      <div id="zc2" class="zoneCarte"></div>
-      <div id="zc3" class="zoneCarte"></div>
-      <div id="zc4" class="zoneCarte"></div>
-      <div id="zc5" class="zoneCarte"></div>
-      <div id="zc6" class="zoneCarte"></div>
-      <div id="zc7" class="zoneCarte"></div>
-      <div id="zc8" class="zoneCarte"></div>
-      <div id="zc9" class="zoneCarte"></div>
-      <div id="vide"></div>
-      <div id="scoreTab"></div>
-    </div>
-    <div id="mainPlayer2">
-      <?php echo $player2 ?>
-    </div>
-  </div>
-<script src="assets/js/script.js" type="text/javascript"></script>
 </body>
 </html>

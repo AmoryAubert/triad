@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+html{
+    background: url("../img/backgroundtriad.png") center fixed no-repeat;
+    background-size: cover;
+    margin:0;
+    padding:0;
+}
+h1{
+    font-family: "Pacifico";
+    letter-spacing: .2em;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    font-size: 2.5em;
+    text-decoration: #eee underline;
+    margin: 20px 0;
+}
+#menu{
+    width: 800px;
+    max-width: 800px;
+    height: 400px;
+    max-height: 400px;
+    margin: auto;
+    background: rgba(125, 87, 136, 0.8);
+    border-radius: 10px;
+    border: 1px solid #444;
+}
+li{
+    list-style: none;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    font-family: "Pacifico";
+    font-size: 2.5em;
+    line-height: 1.75em;
+    letter-spacing: .09em;
+}
+li a{
+    text-decoration: none;
+    color: #000;
+}
+li a:hover{
+    /* text-decoration: underline;
+    text-underline-position: under; */
+    color: #fff;
+}
