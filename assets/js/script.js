@@ -6,9 +6,13 @@ let playing = random(1,3);
 let image = document.getElementsByClassName("img-container");
 let zonePlayerOne = document.getElementById("mainPlayer1");
 let zonePlayerTwo = document.getElementById("mainPlayer2");
-setDraggable();
-
+let scoreTab = document.getElementById("scoreTab");
+let banner = document.getElementById("vide");
 let cardDrop;
+let playedCard = 0;
+let blueScore;
+let redScore;
+let win;
 let tableCard = [
         [-1,-1,-1,-1],
         [-1,-1,-1,-1],
@@ -21,8 +25,9 @@ let tableCard = [
         [-1,-1,-1,-1]
 ];
 
+setDraggable();
+
 function setDraggable(){
-  console.log(playing);
   if (playing == 1){
     for (let i=0; i < 5; i++){
       image[i].setAttribute("draggable","true");
@@ -41,6 +46,13 @@ function setDraggable(){
     for (let i=5; i < 10; i++){
       image[i].setAttribute("draggable","true");
       zonePlayerTwo.style.background = "url('assets/img/palet2.png') no-repeat right top";
+    }
+  }
+  if (playedCard == 9){
+    for (let i=0; i < 10; i++){
+      image[i].setAttribute("draggable","false");
+      zonePlayerOne.style.background = "none";
+      zonePlayerTwo.style.background = "none";
     }
   }
 }
@@ -62,20 +74,16 @@ function drop(ev) {
   let idCard = ev.target.querySelectorAll("div"); // ID de la carte jouée
   cardDrop = ev.target.id; //ID zone drop de la carte
   for (let i = 0; i < cardPower.length; i++){
-    // console.log(cardPower[i].innerHTML);
     tableCard[(ev.target.id.substr(2, 1))-1][i]=cardPower[i].innerHTML;
   }
-  // console.log(idCard[0].id);
-  // console.log(cardDrop);
   if (idCard[0].id.substr(4, 2) < 6){
     ev.target.style.background = "#008";
-    playing ++;
+    playing++;
   }
   else{
     ev.target.style.background = "#800";
-    playing --;
+    playing--;
   }
-  setDraggable();
   switch(ev.target.id.substr(2, 1)){
     case "1": 
             if ((parseInt(tableCard[(ev.target.id.substr(2, 1))-1][2]) > tableCard[1][1])&&(tableCard[1][1]>-1)){
@@ -288,7 +296,28 @@ function drop(ev) {
           }
           break;
   }
-  // console.log(tableCard);
+  playedCard++;
+  redScore=0; blueScore=0;
+  for (let i = 0; i < dropZone.length; i++){
+    if (dropZone[i].style.background === "rgb(136, 0, 0)"){
+      redScore++;
+    }
+    if (dropZone[i].style.background === "rgb(0, 0, 136)"){
+      blueScore++;
+    }
+  }
+  setDraggable();
+  if ((playedCard == 9)){
+    if (redScore >= 5){
+      win = "Joueur 2 gagne !";
+    }
+    if (blueScore >= 5){
+      win = "Joueur 1 gagne !";
+    }
+    scoreTab.style.display = "block";
+    banner.style.display = "block";
+    scoreTab.innerHTML = "<p>"+win+"</p>";
+  }
 }
 
 let dropZone=document.querySelectorAll('.zoneCarte');

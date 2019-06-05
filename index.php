@@ -26,6 +26,8 @@
       <div id="zc7" class="zoneCarte"></div>
       <div id="zc8" class="zoneCarte"></div>
       <div id="zc9" class="zoneCarte"></div>
+      <div id="vide"></div>
+      <div id="scoreTab"></div>
     </div>
     <div id="mainPlayer2">
       <?php echo $player2 ?>
