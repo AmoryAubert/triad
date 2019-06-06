@@ -25,6 +25,9 @@ h1{
     border-radius: 10px;
     border: 1px solid #444;
 }
+ul{
+    vertical-align: middle;
+}
 li{
     list-style: none;
     text-align: center;
@@ -38,9 +41,9 @@ li{
 li a{
     text-decoration: none;
     color: #000;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
 }
 li a:hover{
-    /* text-decoration: underline;
-    text-underline-position: under; */
     color: #fff;
 }

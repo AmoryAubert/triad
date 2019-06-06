@@ -116,6 +116,7 @@ html{
     -webkit-text-stroke-color: #fff;
     letter-spacing: .1em;
     display: none;
+    animation: scoreTab 2.5s forwards;
 }
 #vide{
     position: absolute;
@@ -125,4 +126,28 @@ html{
     border-radius: 5px;
     opacity: 0.4;
     display: none;
+}
+@keyframes scoreTab{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes palet1{
+    from{
+        background-position-x: 100%;
+    }
+    to{
+        background-position-x: 0%;
+    }
+}
+@keyframes palet2{
+    from{
+        background-position-x: 0%;
+    }
+    to{
+        background-position-x: 100%;
+    }
 }
