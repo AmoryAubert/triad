@@ -22,11 +22,11 @@ h1{
     max-height: 400px;
     margin: auto;
     background: rgba(125, 87, 136, 0.8);
-    border-radius: 10px;
     border: 1px solid #444;
-}
-ul{
-    vertical-align: middle;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 li{
     list-style: none;
@@ -37,6 +37,7 @@ li{
     font-size: 2.5em;
     line-height: 1.75em;
     letter-spacing: .09em;
+    align-items: center;
 }
 li a{
     text-decoration: none;
