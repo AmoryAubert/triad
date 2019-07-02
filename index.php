@@ -12,7 +12,7 @@
     <h1>Triad</h1>
     <div id="menu">
         <ul>
-            <li><a href="#" id="opt1">Joueur contre Joueur (local)</a></li>
+            <li><span id="opt1">Joueur contre Joueur (local)</span></li>
             <li>Joueur contre Joueur (en ligne)</li>
             <li>Joueur contre Ordinateur</li>
         </ul>

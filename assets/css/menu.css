@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 *{
-    user-drag: none; 
+    user-drag: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
@@ -47,12 +47,14 @@ li{
     letter-spacing: .1em;
     align-items: center;
 }
-li a{
-    text-decoration: none;
+li span, li a{
     color: #000;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
 }
-li a:hover{
+li a{
+    text-decoration: none;
+}
+li span:hover, li a:hover{
     color: #fff;
 }

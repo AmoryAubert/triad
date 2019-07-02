@@ -1,5 +1,5 @@
 <?php
-  require("assets/php/script.php");
+    require("assets/php/build.php");
 ?>
 <!DOCTYPE html>
 <html>

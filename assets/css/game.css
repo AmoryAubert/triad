@@ -108,7 +108,7 @@ html{
     background: #7d5788;
     border: 3px #000 solid;
     border-radius: 10px;
-    margin: 168px 25px;
+    margin: 132px 25px;
     text-align: center;
     font-family: "Pacifico";
     font-size: 2.5em;
@@ -126,6 +126,20 @@ html{
     border-radius: 5px;
     opacity: 0.4;
     display: none;
+}
+#scoreTab p a{
+    color: #000;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    text-decoration: none;
+    border: 2px black solid;
+    background: rgba(174, 144, 182, 0.8);
+    border-radius: 8px;
+    font-size: 0.8em;
+    margin-top: 2px;
+}
+#scoreTab p a:hover{
+    color: #fff;
 }
 @keyframes scoreTab{
     from{

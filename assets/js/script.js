@@ -323,7 +323,7 @@ function play(){
       }
       scoreTab.style.display = "block";
       banner.style.display = "block";
-      scoreTab.innerHTML = "<p>"+win+"</p>";
+      scoreTab.innerHTML = "<p>"+win+"</p><p><a href='index.php'>Retour</a></p>";
     }
   }
 
