@@ -2,7 +2,7 @@
     require("assets/php/build.php");
 ?>
 <!DOCTYPE html>
-<html>
+<html id="mechantBody">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>

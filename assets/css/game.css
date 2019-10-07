@@ -165,3 +165,6 @@ html{
         background-position-x: 100%;
     }
 }
+progress{
+    -webkit-appearance: none;
+}

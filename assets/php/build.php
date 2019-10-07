@@ -1,10 +1,33 @@
 <?php
 if (isset($_GET['opt']) && ($_GET['opt'] == 1)){
-  require("assets/php/withDeck.php");
+    require("assets/php/withDeck.php");
 }
-else {
+else if (isset($_GET['opt']) && ($_GET['opt'] == 2)){
     require("assets/php/randomDeck.php");
+} 
+else if (isset($_GET['opt']) && ($_GET['opt'] == 5)){
+    require("assets/php/withDeck.php");
+    echo '<script type="text/javascript"> let optionGame = "5"; </script>';
 }
+else if (isset($_GET['opt']) && ($_GET['opt'] == 6)){
+    require("assets/php/randomDeck.php");
+    echo '<script type="text/javascript"> 
+    let optionGame = "6";
+    </script>';
+}
+else{
+    header( "refresh:4; url=index.php" ); 
+    echo "<p>Erreur: redirection vers le menu en cours ...</p>";
+    echo "<p><progress id='load' value='0' max='154'></progress></p>";
+    echo '<script type="text/javascript"> 
+    let meter = document.getElementById("load");
+    console.log(meter);
+    valueMeter=0;
+    setInterval(()=>{valueMeter++
+    meter.value=valueMeter},25);
+    </script>';
+    die();
+} 
 $x=1;
 $player1="";
 $player2="";

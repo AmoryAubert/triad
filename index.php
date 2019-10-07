@@ -13,8 +13,8 @@
     <div id="menu">
         <ul>
             <li><span id="opt1">Joueur contre Joueur (local)</span></li>
-            <li>Joueur contre Joueur (en ligne)</li>
-            <li>Joueur contre Ordinateur</li>
+            <li><span id="opt2">Joueur contre Joueur (en ligne)</span></li>
+            <li><span id="opt3">Joueur contre Ordinateur</span></li>
         </ul>
         <div id="deck1"></div>
         <div id="deck2"></div>
